@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ElectronMasterController": {
+    "ElectronWithPrimeNG": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ElectronMasterController",
+            "outputPath": "dist/ElectronWithPrimeNG",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,7 +23,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/nova-light/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           },
@@ -57,18 +60,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ElectronMasterController:build"
+            "browserTarget": "ElectronWithPrimeNG:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ElectronMasterController:build:production"
+              "browserTarget": "ElectronWithPrimeNG:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ElectronMasterController:build"
+            "browserTarget": "ElectronWithPrimeNG:build"
           }
         },
         "test": {
@@ -102,7 +105,7 @@
         }
       }
     },
-    "ElectronMasterController-e2e": {
+    "ElectronWithPrimeNG-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -111,11 +114,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ElectronMasterController:serve"
+            "devServerTarget": "ElectronWithPrimeNG:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ElectronMasterController:serve:production"
+              "devServerTarget": "ElectronWithPrimeNG:serve:production"
             }
           }
         },
@@ -131,5 +134,5 @@
       }
     }
   },
-  "defaultProject": "ElectronMasterController"
+  "defaultProject": "ElectronWithPrimeNG"
 }
